@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS grid</title>
+  <style>
+      .container {
+        max-width:350px;
+
+        display: grid;
+        grid-template-areas: 'header header header header' 'sidebar content';
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+      }
+
+      .item {
+        padding: 10px;
+        border-color: 2px solid rgb(0, 0, 0);
+        box-shadow: 2px 4px 8px 1px rgb(161, 157, 157); /*Задает тень элемента используя пять параметров. Сдвиг по оси X / сдвиг по оси Y / размытие тени / распространение (увеличение) тени / цвет тени */
+        background-color: rgb(244,245,249);
+        border-radius: 8px;
+
+      }
+      .header {
+        grid-area: header;
+
+        display: grid;
+        grid-template-areas: 'header_about' 'header_service' 'header_projects' 'header_contact';
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-start: 4;
+
+      }
+      .sidebar {
+        grid-area: sidebar;
+        align-self: start; 
+        justify-self: center;
+        border-radius: 10px;
+      }
+      .content {
+        grid-area: content;
+        border-radius: 15px;
+
+      }
+
+
+      .header_about {
+        grid-area: header_about;
+        grid-row: 1;
+        grid-column: 1;
+        align-content: center;
+        justify-content: center;
+      }
+
+      .header_service {
+        grid-area: header_service;
+        grid-row: 1;
+        grid-column: 2;
+      }
+
+      .header_projects {
+        grid-area: header_projects;
+        grid-row: 1;
+        grid-column: 3;
+      }
+
+      .header_contact {
+        grid-area: header_contact;
+        grid-row: 1;
+        grid-column: 4;
+      }
+
+  </style>  
+</head>
+<body>
+<div class="container">
+  <div class="item header">header</div>
+    
+  
+    <div class="item header_about">about</div>
+    <div class="item header_service">service</div>
+    <div class="item header_projects">projects</div>
+    <div class="item header_contact">contact</div>
+  
+  </div>
+
+  <div class="item sidebar">
+
+    <div class="link">link 1</div>
+    <div class="link">link 2</div>
+    <div class="link">link 3</div>
+    <div class="link">link 4</div>
+    <div class="link">link 5</div>
+  
+  </div>
+  
+  <div class="item content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, sapiente, itaque doloremque nulla odio unde recusandae exercitationem, ratione voluptate suscipit vitae totam rerum veritatis aut ex voluptatum facere ullam iure. Nisi, esse officiis. Perspiciatis accusantium minus nesciunt est nobis, aliquid quaerat cum exercitationem voluptate? Modi mollitia exercitationem vero sapiente a ab consectetur fuga quo voluptatibus. Provident aliquam necessitatibus dolores debitis dolorem eaque eligendi quia, magnam ducimus, beatae delectus exercitationem veniam sed autem sapiente cumque. Adipisci aliquam facere eum fugit repudiandae possimus molestias laboriosam doloribus sunt, praesentium dolorem assumenda unde quas, nulla, quidem explicabo. Incidunt quasi enim quisquam ipsa architecto explicabo. Sit, tempora eligendi. Ratione architecto veritatis blanditiis excepturi expedita inventore soluta maiores ut tempora nihil provident nostrum molestias quis nisi perferendis nemo, sunt neque, placeat, at sed voluptatem autem corrupti distinctio? Minima corrupti quisquam voluptatem error asperiores beatae tempora perferendis nam aspernatur officiis. Quasi, dolorem similique ipsam dolor qui soluta.
+  </div>
+
+  
+
+</div>
+</body>
+</html>
